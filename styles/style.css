@@ -320,3 +320,32 @@
     max-width: 300px;
   }
 }
+
+.header__theme-menu-button:hover {
+  border-color: var(--focus-outline-color);
+  opacity: 0.6;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-color: var(--focus-outline-color);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
+.card__link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.card__link:focus {
+  outline: none;
+}
+
+.card__link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
