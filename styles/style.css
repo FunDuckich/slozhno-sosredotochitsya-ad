@@ -1,5 +1,181 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  color: var(--text-color);
+  font-family: var(--font-family), sans-serif;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-base);
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  padding: var(--padding-base);
+  height: 100vh;
+  min-height: 668px;
+}
+
+.header__rec {
+  position: absolute;
+  top: 11px;
+  right: 18px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.header__rec::after {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header__theme-menu-button {
+  padding: 0 13px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__title {
+  color: var(--title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__subtitle {
+  width: 100%;
+  justify-self: end;
+  font-weight: var(--font-weight-bold);
+}
+
+
+.main {
+  display: grid;
+  gap: 50px;
+  padding: 40px var(--padding-base);
+}
+
+.section {
+  display: grid;
+  gap: 20px;
+}
+
+.section__title {
+  color: var(--decorated-zone-color);
+  font-size: inherit;
+  font-weight: var(--font-weight-bold);
+}
+
+.section__content {
+  display: grid;
+  gap: 20px;
+}
+
+.section__subtitle {
+  width: 100%;
+  font-weight: var(--font-weight-normal);
+}
+
+.card__title {
+  font-size: inherit;
+  font-weight: var(--font-weight-bold);
+  margin-block-end: 10px;
+}
+
+.card__text {
+  line-height: inherit;
+}
+
+.card__link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+
+.gallery {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.footer {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: var(--padding-base);
+  height: 100vh;
+  min-height: 668px;
+}
+
+.footer__title {
+  color: var(--title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+
+.decorated-zone {
+  padding: var(--padding-base);
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.decorated-zone::before {
+  top: 10px;
+  right: 10px;
+  border-top: 1px solid var(--decorated-zone-color);
+  border-right: 1px solid var(--decorated-zone-color);
+}
+
+.decorated-zone::after {
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 1px solid var(--decorated-zone-color);
+  border-left: 1px solid var(--decorated-zone-color);
+}
+
+.title-decor {
+  color: var(--bg-color);
+  background-color: var(--title-decor-color);
 }
